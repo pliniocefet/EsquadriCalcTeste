@@ -5,6 +5,8 @@ from tkinter import messagebox
 class Orcamento:
     """ DEFINE A TELA DE NOVO ORÇAMENTO """
 
+
+
     # METODO CONSTRUTOR DA CLASSE ORCAMENTO
     def __init__(self):
         self.tela_novo_orcamento = Tk()
@@ -135,7 +137,13 @@ class Orcamento:
 
         self.tela_novo_orcamento.geometry('510x430+400+150')
         self.tela_novo_orcamento.resizable(width=FALSE, height=FALSE)
-        self.tela_novo_orcamento.mainloop()
+        #self.tela_novo_orcamento.mainloop()
+
+    
+    """
+    TODO IMPLEMENTAR O METODO chama_tela_novo_orcamento
+    """
+
 
     def bt_salvar_orcamento(self):
         messagebox.showinfo("salvou","salvou")

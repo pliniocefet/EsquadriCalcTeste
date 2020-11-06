@@ -5,13 +5,12 @@ from tkinter import messagebox
 class Orcamento:
     """ DEFINE A TELA DE NOVO ORÇAMENTO """
 
-
-
-    # METODO CONSTRUTOR DA CLASSE ORCAMENTO
     def __init__(self):
-        self.tela_novo_orcamento = Tk()
-        self.tela_novo_orcamento.title('Novo Orçamento')
-
+        """
+        Metodo construtor da classe Orçamento
+        """
+        self.tela_novo_orcamento = None
+        
         # LABEL DE CONTROLE DE ORÇAMENTOS
         lb_controle = Label(self.tela_novo_orcamento, text='Cód Controle:')
         lb_controle.place(x=5, y=5)
@@ -138,10 +137,29 @@ class Orcamento:
         self.tela_novo_orcamento.geometry('510x430+400+150')
         self.tela_novo_orcamento.resizable(width=FALSE, height=FALSE)
         #self.tela_novo_orcamento.mainloop()
+    
+    
+    def centraliza_janela(self, instancia_tk):
+        """
+        Metodo para centralizar a tela
+        """
+        largura_janela = instancia_tk.winfo_reqwidth()
+        altura_janela = instancia_tk.winfo_reqheight()
+        # print("largura da tela: ", largura_janela, "altura da tela: ", altura_janela)
 
+        posicao_x = int((instancia_tk.winfo_screenwidth() / 2) - (largura_janela))
+        posicao_y = int((instancia_tk.winfo_screenheight() / 3) - (altura_janela))
+
+        instancia_tk.geometry("+{}+{}".format(posicao_x, posicao_y))
+
+
+    def chama_tela_novo_orcamento(self):
+        self.tela_novo_orcamento = Tk()
+        self.tela_novo_orcamento.title('Novo Orçamento')
     
     """
     TODO IMPLEMENTAR O METODO chama_tela_novo_orcamento
+    alterar esta classe para ficar padrão como as outras. Exemplo a classe Perfil
     """
 
 

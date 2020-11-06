@@ -3,6 +3,10 @@ from tela_ajuda import Ajuda
 from tela_novo_orcamento import Orcamento
 from tela_pesquisar_orcamento import Pesquisar
 from tela_config_vidro import ConfiguraVidro
+from perfil import Perfil
+from acessorio import Acessorio
+from vidro import Vidro
+from produto import Produto
 
 
 class TelaPrincipal:
@@ -13,11 +17,11 @@ class TelaPrincipal:
         self.menu_principal = None
         self.submenu_orcamento = None
         self.submenu_cadastro = None
-        #self.perfil = Perfil()
-        #self.acessorio = Acessorio()
-        #self.vidro = Vidro()
-        #self.produto = Produto()
-        #self.orcamento = Orcamento()
+        self.perfil = Perfil()
+        self.acessorio = Acessorio()
+        self.vidro = Vidro()
+        self.produto = Produto()
+        self.orcamento = Orcamento()
 
     """
     Metodo para centralizar a janela na tela
@@ -33,10 +37,11 @@ class TelaPrincipal:
         instancia_tk.geometry("+{}+{}".format(posicao_x, posicao_y))
 
 
-    """
-    Chama a tela principal do programa
-    """
+    
     def chama_tela_principal(self):
+        """
+        Chama a tela principal do programa
+        """
 
         # Configuraçõe da tela
         self.tela_principal.title("Cálculo de Esquadrias de Alumínio")

@@ -10,10 +10,7 @@ class Orcamento:
         Metodo construtor da classe Orçamento
         """
         self.tela_novo_orcamento = None
-        
-        # LABEL DE CONTROLE DE ORÇAMENTOS
-        lb_controle = Label(self.tela_novo_orcamento, text='Cód Controle:')
-        lb_controle.place(x=5, y=5)
+        self.lb_controle_orcamento = None
 
         # LABEL DO NUMERO DE CONTROLE
         # implementar para o codigo ser sequencial
@@ -156,6 +153,10 @@ class Orcamento:
     def chama_tela_novo_orcamento(self):
         self.tela_novo_orcamento = Tk()
         self.tela_novo_orcamento.title('Novo Orçamento')
+        
+        # LABEL DE CONTROLE DE ORÇAMENTOS
+        self.lb_controle_orcamento = Label(self.tela_novo_orcamento, text='Cód Controle:')
+        self.lb_controle_orcamento.place(x=5, y=5)
     
     """
     TODO IMPLEMENTAR O METODO chama_tela_novo_orcamento

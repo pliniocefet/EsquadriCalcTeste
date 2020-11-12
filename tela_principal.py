@@ -13,7 +13,7 @@ class TelaPrincipal:
 
     def __init__(self):
         # Instancia de Tk
-        self.tela_principal = Tk()
+        self.tela_principal = None
         self.menu_principal = None
         self.submenu_orcamento = None
         self.submenu_cadastro = None
@@ -42,6 +42,7 @@ class TelaPrincipal:
         """
         Chama a tela principal do programa
         """
+        self.tela_principal = Tk()
 
         # Configuraçõe da tela
         self.tela_principal.title("Cálculo de Esquadrias de Alumínio")
@@ -53,7 +54,7 @@ class TelaPrincipal:
 
         # Cria submenus em Orçamentos
         self.submenu_orcamento = Menu(self.menu_principal, tearoff=0)
-        self.submenu_orcamento.add_command(label="Novo Orçamento")
+        self.submenu_orcamento.add_command(label="Novo Orçamento", command=self.orcamento.chama_tela_novo_orcamento)
         self.submenu_orcamento.add_command(label="Buscar Orçamento")
         self.submenu_orcamento.add_command(label="Sair", command=sys.exit)
         

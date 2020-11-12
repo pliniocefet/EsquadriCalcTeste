@@ -8,12 +8,13 @@ from tela_principal import TelaPrincipal
 
 class Login:
     def __init__(self):
-        self.tela_login = Tk()
+        self.tela_login = None
+        self.tela_login = None
         self.novo_usuario = None
         self.lb_usuario = None
         self.lb_senha = None
-        self.entry_usuario = Entry(self.tela_login)
-        self.entry_senha = Entry(self.tela_login, show="*")
+        self.entry_usuario = None
+        self.entry_senha = None
         self.bt_cadastrar = None
         self.bt_login = None
         self.bt_cancelar = None
@@ -64,10 +65,12 @@ class Login:
 
             if resultado == usuario_senha:
                 messagebox.showinfo("Bem vindo", "Seja Bem vindo " + self.entry_usuario.get().title())
+                self.tela_login.destroy()
                 TelaPrincipal().chama_tela_principal()
+                
 
-                """
-                ENCONTRAR UMA FORMA DE FECHAR A JANELA DE LOGIN APÓS O USUARIO LOGAR COM SUCESSO
+                """ TODO
+                    ENCONTRAR UMA FORMA DE FECHAR A JANELA DE LOGIN APÓS O USUARIO LOGAR COM SUCESSO
                 """
 
             if usuario_senha not in busca_usuario:
@@ -76,14 +79,19 @@ class Login:
 
 
     def chama_tela_login(self):
+        self.tela_login = Tk()
         self.tela_login.title("Login")
         self.tela_login.geometry("250x160")
         self.centraliza_janela(self.tela_login)
+        
         self.lb_usuario = Label(self.tela_login, text="Usuario:")
         self.lb_usuario.grid(row=0, column=0, pady=20, padx=20)
+        self.entry_usuario = Entry(self.tela_login)
         self.entry_usuario.grid(row=0, column=1)
+        
         self.lb_senha = Label(self.tela_login, text="Senha:")
         self.lb_senha.grid(row=1, column=0)
+        self.entry_senha = Entry(self.tela_login, show='*')
         self.entry_senha.grid(row=1, column=1)
         self.lb_space = Label(self.tela_login, text="")
         self.lb_space.grid(row=0, column=2)

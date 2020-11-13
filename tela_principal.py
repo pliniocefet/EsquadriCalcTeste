@@ -22,6 +22,7 @@ class TelaPrincipal:
         self.vidro = Vidro()
         self.produto = Produto()
         self.orcamento = Orcamento()
+        self.configurar_vidro = ConfiguraVidro()
 
     """
     Metodo para centralizar a janela na tela
@@ -65,9 +66,20 @@ class TelaPrincipal:
         self.submenu_cadastro.add_command(label="Cadastrar vidro", command=self.vidro.chama_tela_cadastro_vidro)
         self.submenu_cadastro.add_command(label="Cadastrar Produto", command=self.produto.chama_tela_cadastro_produto)
 
+        # Cria submenus em Configurações
+        self.submenu_configuracoes = Menu(self.menu_principal, tearoff=0)
+        
+        """
+            TODO
+            Alterar a classe de configuração do vidro para o mesmo padrão das outras
+            criar o metodo chama tela e chamar no command do menu
+        """
+        self.submenu_configuracoes.add_command(label='Configurar Vidro')
+
         # Adiciona os itens de menu ao menu principal
         self.menu_principal.add_cascade(label="Orçamento", menu=self.submenu_orcamento)
         self.menu_principal.add_cascade(label="Cadastro", menu=self.submenu_cadastro)
+        self.menu_principal.add_cascade(label='Configurações', menu=self.submenu_configuracoes)
 
         self.tela_principal.config(menu=self.menu_principal)
 

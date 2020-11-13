@@ -3,13 +3,64 @@ from tkinter import ttk
 
 
 class ConfiguraVidro:
-
-    def recupera(self):
-        print(self.cbText.get())
+    """
+    Classe que apresenta a tela de configurações relacionadas ao vidro
+    """
 
     def __init__(self):
+        """
+        METODO CONSTRUTOR DA CLASSE ConfiguraVidro
+        """
+        self.tela_config_vidro = None
+        self.lb_opcoes = None
+        self.cb_tipo_vidro = None
+        self.lb_cor_vidro = None
+        self.cb_cor_vidro = None
+        self.lb_espessura_vidro = None
+        self.cb_espessura_vidro = None
+        self.lb_tratamento_vidro = None
+        self.cb_tratamento_vidro = None
+        self.bt_editar_opcoes_vidro = None
+        self.bt_novo_vidro = None
+        self.bt_excluir_vidro = None
+        self.bt_pesquisar_vidro = None
+        self.lb_tipo_vidro = None
+        self.entry_tipo_vidro = None
+        self.lb_cor_vidro = None
+        self.entry_cor_vidro = None
+        self.entry_espesssura_vidro = None
+        self.entry_tratamento_vidro = None
+        self.lb_peso_vidro = None
+        self.entry_peso_vidro = None
+
+
+    def event_bt_pesquisar_vidro(self):
+        pass
+    
+    
+    def event_bt_excluir_vidro(self):
+        pass
+    
+    
+    def event_bt_novo_vidro(self):
+        pass
+
+
+    def event_bt_editar_opcoes_vidro(self):
+        self.entry_tipo_vidro['state']='normal'
+        self.entry_cor_vidro['state']='normal'
+        self.entry_espesssura_vidro['state']='normal'
+        self.entry_tratamento_vidro['state']='normal'
+        self.entry_peso_vidro['state']='normal'
+
+    
+    def chama_tela_config_vidro(self):
+        """
+        METODO QUE EXIBE A TELA DE CONFIGURAÇÕES DE VIDRO
+        """
+        # CONFIGURAÇÕES DE TITULO E DIMENSÕES DA TELA
         self.tela_config_vidro = Tk()
-        self.tela_config_vidro.geometry('550x500+300+100')
+        self.tela_config_vidro.geometry('650x550+300+100')
         self.tela_config_vidro.title('Configurações dos Vidros')
 
         # LABEL DE OPÇÕES DE VIDROS
@@ -55,7 +106,7 @@ class ConfiguraVidro:
 
         # BOTÃO EDITAR PROPRIEDADES DO VIDRO
         # implementar para o click habilitar os campos de edição
-        self.bt_editar_opcoes_vidro = Button(self.tela_config_vidro, text='Editar', width=10, command=self.recupera)
+        self.bt_editar_opcoes_vidro = Button(self.tela_config_vidro, text='Editar', width=10, command=self.event_bt_editar_opcoes_vidro)
         self.bt_editar_opcoes_vidro.place(x=20, y=65)
 
         # BOTÃO NOVO VIDRO
@@ -73,45 +124,47 @@ class ConfiguraVidro:
         self.bt_pesquisar_vidro.place(x=440, y=65)
 
         # LABEL DO TIPO DE VIDRO
-        self.label_tipo_vidro = Label(self.tela_config_vidro, text='Tipo:')
-        self.label_tipo_vidro.place(x=10, y=110)
+        self.lb_tipo_vidro = Label(self.tela_config_vidro, text='Tipo:')
+        self.lb_tipo_vidro.place(x=10, y=110)
 
         # ENTRADA DE DADOS DO CAMPO TIPO DE VIDRO
         self.setText = StringVar()
-        self.entry_tipo_vidro = Entry(self.tela_config_vidro, textvariable=self.setText, width=20)
+        self.entry_tipo_vidro = Entry(self.tela_config_vidro, textvariable=self.setText, width=15, state='disable')
         self.entry_tipo_vidro.place(x=45, y=110)
 
         # LABEL DA COR DO VIDRO
-        self.label_cor_vidro = Label(self.tela_config_vidro, text='Cor:')
-        self.label_cor_vidro.place(x=180, y=110)
+        self.lb_cor_vidro = Label(self.tela_config_vidro, text='Cor:')
+        self.lb_cor_vidro.place(x=150, y=110)
 
         # ENTRADA DE DADOS DA COR DO VIDRO
-        self.entry_cor_vidro = Entry(self.tela_config_vidro, width=10, state='disable')
-        self.entry_cor_vidro.place(x=210, y=110)
+        self.entry_cor_vidro = Entry(self.tela_config_vidro, width=15, state='disable')
+        self.entry_cor_vidro.place(x=180, y=110)
 
         # LABEL DA ESPESSURA DO VIDRO
-        self.label_espessura_vidro = Label(self.tela_config_vidro, text='Espessura:')
-        self.label_espessura_vidro.place(x=290, y=110)
+        self.lb_espessura_vidro = Label(self.tela_config_vidro, text='Espessura:')
+        self.lb_espessura_vidro.place(x=290, y=110)
 
         # ENTRADA DE DADOS DA ESPESSURA
-        self.entry_espesssura_vidro = Entry(self.tela_config_vidro, width=10, state='disable')
+        self.entry_espesssura_vidro = Entry(self.tela_config_vidro, width=5, state='disable')
         self.entry_espesssura_vidro.place(x=350, y=110)
 
         # LABEL DO TRATAMENTO
-        self.label_tratamento_vidro = Label(self.tela_config_vidro, text='Trat.')
-        self.label_tratamento_vidro.place(x=425, y=110)
+        self.lb_tratamento_vidro = Label(self.tela_config_vidro, text='Trat.')
+        self.lb_tratamento_vidro.place(x=400, y=110)
 
         # ENTRADA DE DADOS DO TRATAMENTO
         self.entry_tratamento_vidro = Entry(self.tela_config_vidro, width=12, state='disable')
-        self.entry_tratamento_vidro.place(x=455, y=110)
+        self.entry_tratamento_vidro.place(x=435, y=110)
 
         # LABEL DO KG/M
-        self.label_peso_vidro = Label(self.tela_config_vidro, text='Kg/m2:')
-        self.label_peso_vidro.place(x=10, y=145)
+        self.lb_peso_vidro = Label(self.tela_config_vidro, text='Kg/m2:')
+        self.lb_peso_vidro.place(x=525, y=110)
 
         # ENTRADA DE DADOS DO PESO DO VIDRO
         # implementar metodo para calcular o peso do vidro de acordo com a espessura informada
         self.entry_peso_vidro = Entry(self.tela_config_vidro, width=10, state='disable')
-        self.entry_peso_vidro.place(x=55, y=145)
+        self.entry_peso_vidro.place(x=570, y=110)
 
         self.tela_config_vidro.mainloop()
+
+chama = ConfiguraVidro().chama_tela_config_vidro()

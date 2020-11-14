@@ -76,12 +76,13 @@ class ConexaoUsuario:
         self.cursor.close()
         self.connection.close()
 
-    def buscar_user(self):
+    def buscar_user(self, usuario):
         self.cursor = self.connection.cursor()
         self.table_name = "usuarios"
-        self.sql_query = "Select usuario, senha from " + self.table_name
-        self.cursor.execute(self.sql_query)
-        
+        self.sql_query = "Select usuario, senha from " + self.table_name + " where usuario = %s"
+        self.cursor.execute(self.sql_query, (usuario,))
+ 
         self.return_query = self.cursor.fetchall()
+
 
         return self.return_query

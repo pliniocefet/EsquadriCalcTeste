@@ -59,22 +59,16 @@ class Login:
         METODO QUE VERIFICA NO BANCO DE DADOS O NOME DO USUARIO E A SENHA
         BOTÃO LOGIN
         """
-        busca_usuario = self.conexao.buscar_user()
-        usuario_senha = (self.entry_usuario.get(), self.entry_senha.get())
+        usuario = self.conexao.buscar_user(self.entry_usuario.get())       
 
-        for resultado in busca_usuario:
-
-            if resultado == usuario_senha:
-                messagebox.showinfo("Bem vindo", "Seja Bem vindo " + self.entry_usuario.get().title())
-                tela_principal = TelaPrincipal() # Instancia da TelaPrincipal
-                tela_principal.usuario_logado = self.entry_usuario.get().title()
-                self.tela_login.destroy()
-                tela_principal.chama_tela_principal()
-                
-
-            if usuario_senha not in busca_usuario:
-                messagebox.showinfo("Atenção", "Usuario ou senha Inválidos")
-                break
+        if usuario[0][0] == self.entry_usuario.get() and usuario[0][1] == self.entry_senha.get():
+            messagebox.showinfo("Bem vindo", "Seja Bem vindo " + usuario[0][0].title())
+            tela_principal = TelaPrincipal() # Instancia da TelaPrincipal
+            tela_principal.usuario_logado = usuario[0][0].title()
+            self.tela_login.destroy()
+            tela_principal.chama_tela_principal()
+        else:
+            messagebox.showinfo("Bem vindo", "Usuario ou senha inválidos!! ")
 
 
     def chama_tela_login(self):

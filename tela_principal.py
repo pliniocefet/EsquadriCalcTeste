@@ -24,6 +24,8 @@ class TelaPrincipal:
         self.orcamento = Orcamento()
         self.configurar_vidro = ConfiguraVidro()
 
+        self.usuario_logado = None
+
     """
     Metodo para centralizar a janela na tela
     """
@@ -46,7 +48,7 @@ class TelaPrincipal:
         self.tela_principal = Tk()
 
         # Configuraçõe da tela
-        self.tela_principal.title("Cálculo de Esquadrias de Alumínio")
+        self.tela_principal.title(f"Cálculo de Esquadrias de Alumínio *** Usuario Logado: {self.usuario_logado} ***")
         self.centraliza_janela(self.tela_principal)
         self.tela_principal.geometry("400x400")
 

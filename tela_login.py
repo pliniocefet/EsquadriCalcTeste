@@ -19,6 +19,7 @@ class Login:
         self.bt_login = None
         self.bt_cancelar = None
         self.lb_space = None
+        
 
         """
             Para uso do banco de dados
@@ -65,16 +66,14 @@ class Login:
 
             if resultado == usuario_senha:
                 messagebox.showinfo("Bem vindo", "Seja Bem vindo " + self.entry_usuario.get().title())
+                tela_principal = TelaPrincipal() # Instancia da TelaPrincipal
+                tela_principal.usuario_logado = self.entry_usuario.get().title()
                 self.tela_login.destroy()
-                TelaPrincipal().chama_tela_principal()
+                tela_principal.chama_tela_principal()
                 
 
-                """ TODO
-                    ENCONTRAR UMA FORMA DE FECHAR A JANELA DE LOGIN APÓS O USUARIO LOGAR COM SUCESSO
-                """
-
             if usuario_senha not in busca_usuario:
-                messagebox.showinfo("Atenção", "Usuario não cadastrado")
+                messagebox.showinfo("Atenção", "Usuario ou senha Inválidos")
                 break
 
 

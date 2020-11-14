@@ -87,6 +87,7 @@ class Login:
         self.lb_usuario.grid(row=0, column=0, pady=20, padx=20)
         self.entry_usuario = Entry(self.tela_login)
         self.entry_usuario.grid(row=0, column=1)
+        self.entry_usuario.focus_force()
         
         self.lb_senha = Label(self.tela_login, text="Senha:")
         self.lb_senha.grid(row=1, column=0)

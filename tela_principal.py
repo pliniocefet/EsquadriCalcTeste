@@ -34,7 +34,7 @@ class TelaPrincipal:
         altura_janela = instancia_tk.winfo_reqheight()
         # print("largura da tela: ", largura_janela, "altura da tela: ", altura_janela)
 
-        posicao_x = int((instancia_tk.winfo_screenwidth() / 2) - (largura_janela))
+        posicao_x = int((instancia_tk.winfo_screenwidth() / 2.5) - (largura_janela))
         posicao_y = int((instancia_tk.winfo_screenheight() / 2) - (altura_janela))
 
         instancia_tk.geometry("+{}+{}".format(posicao_x, posicao_y))
@@ -50,7 +50,7 @@ class TelaPrincipal:
         # Configuraçõe da tela
         self.tela_principal.title(f"Cálculo de Esquadrias de Alumínio *** Usuario Logado: {self.usuario_logado} ***")
         self.centraliza_janela(self.tela_principal)
-        self.tela_principal.geometry("400x400")
+        self.tela_principal.geometry("600x400")
 
         # Cria o menu superior principal
         self.menu_principal = Menu(self.tela_principal)
@@ -74,9 +74,12 @@ class TelaPrincipal:
         """
             TODO
             Alterar a classe de configuração do vidro para o mesmo padrão das outras
-            criar o metodo chama tela e chamar no command do menu
+            criar o metodo chama tela e chamar no commando do menu
         """
-        self.submenu_configuracoes.add_command(label='Configurar Vidro')
+        self.submenu_configuracoes.add_command(label='Configurar Vidro', command=self.configurar_vidro.chama_tela_config_vidro)
+        self.submenu_configuracoes.add_command(label='Configurar Alumínio')
+        self.submenu_configuracoes.add_command(label='Configurar Acessorio')
+        self.submenu_configuracoes.add_command(label='Configurar Produto')
 
         # Adiciona os itens de menu ao menu principal
         self.menu_principal.add_cascade(label="Orçamento", menu=self.submenu_orcamento)

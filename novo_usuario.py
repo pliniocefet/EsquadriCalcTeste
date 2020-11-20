@@ -1,6 +1,6 @@
 from tkinter import *
-from conexao_usuario import ConexaoUsuario
 from tkinter import messagebox
+from conexao_usuario import ConexaoUsuario
 
 class NovoUsuario:
     
@@ -39,6 +39,7 @@ class NovoUsuario:
         self.tela_novo_usuario.title("Novo Usuário")
         self.tela_novo_usuario.geometry("300x150")
         self.centraliza_janela(self.tela_novo_usuario)
+        self.entry_nome_usuario.focus_force()
         
         self.lb_nome_usuario = Label(self.tela_novo_usuario, text="Nome de Usuario:")
         self.lb_nome_usuario.grid(row=0, column=0, padx=20, pady=20)
@@ -56,18 +57,32 @@ class NovoUsuario:
         
         
         return self.tela_novo_usuario.mainloop()
+
+    def valida_usuario_senha(self, usuario, senha):
+        if len(usuario) == 0 or len(senha) == 0: # para campos vazios
+            messagebox.showerror('Erro', 'Usuario ou senha não pode ser vazio') 
+            return False
+        elif usuario.isspace() or senha.isspace(): # para somente com espaços
+            messagebox.showerror('Erro', 'Usuario ou senha não podem ser espaços em branco')
+            return False
+        elif ' ' in usuario or ' ' in senha: # para espaços no meio de usuario ou senha
+            messagebox.showerror('Erro', 'Usuario ou senha não pode conter espaços')
+            return False
+        else:
+            return True
+        
     
     
     def event_bt_salvar(self):
-        self.conexao.inserted_values = (self.entry_nome_usuario.get().lower(), self.entry_senha_usuario.get().lower())
+        usuario = self.entry_nome_usuario.get()
+        senha = self.entry_senha_usuario.get()
         
-        """
-        ENCONTRAR UMA FORMA DE O USUARIO NÃO CADASTRAR UM LOGIN EM BRANCO
-        E TAMBÉM NÃO CADASTRAR USUARIOS COM O MESMO NOME
-        """
+        if self.valida_usuario_senha(usuario, senha):
+            self.conexao.inserted_values = (usuario, senha)
+            self.conexao.insert_user()  
+            self.tela_novo_usuario.destroy()
+        
                 
-        self.conexao.insert_user()
         
-        self.tela_novo_usuario.destroy()
         
         

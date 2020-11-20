@@ -23,13 +23,15 @@ class TelaPrincipal:
         self.produto = Produto()
         self.orcamento = Orcamento()
         self.configurar_vidro = ConfiguraVidro()
+        self.tela_ajuda = Ajuda()
 
         self.usuario_logado = None
 
-    """
-    Metodo para centralizar a janela na tela
-    """
+    
     def centraliza_janela(self, instancia_tk):
+        """
+        Metodo para centralizar a janela na tela
+        """
         largura_janela = instancia_tk.winfo_reqwidth()
         altura_janela = instancia_tk.winfo_reqheight()
         # print("largura da tela: ", largura_janela, "altura da tela: ", altura_janela)
@@ -38,7 +40,6 @@ class TelaPrincipal:
         posicao_y = int((instancia_tk.winfo_screenheight() / 2) - (altura_janela))
 
         instancia_tk.geometry("+{}+{}".format(posicao_x, posicao_y))
-
 
     
     def chama_tela_principal(self):
@@ -70,21 +71,33 @@ class TelaPrincipal:
 
         # Cria submenus em Configurações
         self.submenu_configuracoes = Menu(self.menu_principal, tearoff=0)
-        
-        """
-            TODO
-            Alterar a classe de configuração do vidro para o mesmo padrão das outras
-            criar o metodo chama tela e chamar no commando do menu
-        """
         self.submenu_configuracoes.add_command(label='Configurar Vidro', command=self.configurar_vidro.chama_tela_config_vidro)
         self.submenu_configuracoes.add_command(label='Configurar Alumínio')
         self.submenu_configuracoes.add_command(label='Configurar Acessorio')
         self.submenu_configuracoes.add_command(label='Configurar Produto')
+        
+        """
+            TODO Alterar a classe de configuração do vidro para o mesmo padrão das outras
+            criar o metodo chama tela e chamar no commando do menu
+        """
+
+         # Cria submenus em Relatórios
+        self.submenu_relatorios = Menu(self.menu_principal, tearoff=0)
+        self.submenu_relatorios.add_command(label='Relatorio de Vidros')
+        self.submenu_relatorios.add_command(label='Relatório de Perfis')
+        self.submenu_relatorios.add_command(label='Relatório de Acessorios')
+        self.submenu_relatorios.add_command(label='Relatório de Produtos')
+
+         # Cria submenus em Ajuda
+        self.submenu_ajuda = Menu(self.menu_principal, tearoff=0)
+        self.submenu_ajuda.add_command(label='Sobre...', command=self.tela_ajuda.chama_tela_ajuda)
 
         # Adiciona os itens de menu ao menu principal
         self.menu_principal.add_cascade(label="Orçamento", menu=self.submenu_orcamento)
         self.menu_principal.add_cascade(label="Cadastro", menu=self.submenu_cadastro)
         self.menu_principal.add_cascade(label='Configurações', menu=self.submenu_configuracoes)
+        self.menu_principal.add_cascade(label='Relatórios', menu=self.submenu_relatorios)
+        self.menu_principal.add_cascade(label='Ajuda', menu=self.submenu_ajuda)
 
         self.tela_principal.config(menu=self.menu_principal)
 

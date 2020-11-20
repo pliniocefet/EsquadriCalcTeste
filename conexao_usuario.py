@@ -42,7 +42,7 @@ class ConexaoUsuario:
             self.cursor = self.connection.cursor()
             self.table_name = "usuarios"
             
-            self.sql_insert = "INSERT INTO" + self.table_name + "(usuario, senha) VALUES(%s,%s)"
+            self.sql_insert = "INSERT INTO " + self.table_name + "(usuario, senha) VALUES(%s,%s)"
             
             self.cursor.execute(self.sql_insert, self.inserted_values)
             print("Registro inserido com sucesso!")
@@ -81,8 +81,7 @@ class ConexaoUsuario:
         self.table_name = "usuarios"
         self.sql_query = "Select usuario, senha from " + self.table_name + " where usuario = %s"
         self.cursor.execute(self.sql_query, (usuario,))
- 
+    
         self.return_query = self.cursor.fetchall()
-
-
+        
         return self.return_query

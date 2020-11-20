@@ -59,16 +59,29 @@ class Login:
         METODO QUE VERIFICA NO BANCO DE DADOS O NOME DO USUARIO E A SENHA
         BOTÃO LOGIN
         """
-        usuario = self.conexao.buscar_user(self.entry_usuario.get())       
-
-        if usuario[0][0] == self.entry_usuario.get() and usuario[0][1] == self.entry_senha.get():
-            messagebox.showinfo("Bem vindo", "Seja Bem vindo " + usuario[0][0].title())
-            tela_principal = TelaPrincipal() # Instancia da TelaPrincipal
-            tela_principal.usuario_logado = usuario[0][0].title()
-            self.tela_login.destroy()
-            tela_principal.chama_tela_principal()
+        usuario = self.conexao.buscar_user(self.entry_usuario.get())
+        user = None
+        senha = None
+        
+        if usuario != []:
+            user = usuario[0][0]
+            senha = usuario[0][1]
         else:
-            messagebox.showinfo("Bem vindo", "Usuario ou senha inválidos!! ")
+            messagebox.showinfo("Atenção!", "Usuario ou senha invalida!! ")
+
+
+        if user == self.entry_usuario.get():
+            if senha ==self.entry_senha.get():
+                messagebox.showinfo("Bem vindo", "Seja Bem vindo " + usuario[0][0].title())   
+                tela_principal = TelaPrincipal() # Instancia da TelaPrincipal
+                tela_principal.usuario_logado = user.title()
+                self.tela_login.destroy()
+                tela_principal.chama_tela_principal()
+            
+            else:
+                messagebox.showinfo("Atenção!", "Senha inválida! ") 
+        else:
+            messagebox.showinfo("Atenção!", "Usuario não cadastrado!! ")
 
 
     def chama_tela_login(self):

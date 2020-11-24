@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>tela_novo_orcamento</class>
+ <widget class="QMainWindow" name="tela_novo_orcamento">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Novo Orçamento</string>
+  </property>
+  <widget class="QWidget" name="novo_orcamento">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <widget class="QLabel" name="lb_label_cod_controle">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="text">
+     <string>Cod. Controle:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_cod_controle">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0000</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_label_data">
+    <property name="geometry">
+     <rect>
+      <x>487</x>
+      <y>10</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="text">
+     <string>Data:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_data">
+    <property name="geometry">
+     <rect>
+      <x>519</x>
+      <y>10</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>00 / 00 / 0000</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="entry_nome_cliente">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>190</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_nome_cliente">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>90</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nome do Cliente:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="entry_telefone_cliente">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>60</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_telefone_cliente">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>40</y>
+      <width>50</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Telefone:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="entry_endereco_cliente">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>190</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_endereco_cliente">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Endereço:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="entry_numero_cliente">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>110</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_numero_cliente">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>90</y>
+      <width>45</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Numero:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_vendedor_cliente">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>40</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vendedor Responsável:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cb_vendedores">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>60</y>
+      <width>130</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Selecione o vendedor</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Selecione o vendedor</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>André</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Joaquim</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Jefferson</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Thais</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Merlim</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Plinio</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Natanael</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Wagner</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="entry_bairro_cliente">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>110</y>
+      <width>130</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_bairro_cliente">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>90</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bairro:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_salvar_cliente">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Salvar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_editar_cliente">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Editar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_localizar_cliente">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Localizar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_cidade_cliente">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>90</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cidade:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="entry_cidade_cliente">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>110</y>
+      <width>160</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>entry_nome_cliente</tabstop>
+  <tabstop>entry_telefone_cliente</tabstop>
+  <tabstop>entry_endereco_cliente</tabstop>
+  <tabstop>entry_numero_cliente</tabstop>
+  <tabstop>entry_bairro_cliente</tabstop>
+  <tabstop>entry_cidade_cliente</tabstop>
+  <tabstop>cb_vendedores</tabstop>
+  <tabstop>bt_salvar_cliente</tabstop>
+  <tabstop>bt_editar_cliente</tabstop>
+  <tabstop>bt_localizar_cliente</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

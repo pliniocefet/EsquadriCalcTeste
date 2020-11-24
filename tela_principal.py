@@ -61,6 +61,10 @@ class TelaPrincipal:
         self.submenu_orcamento.add_command(label="Novo Orçamento", command=self.orcamento.chama_tela_novo_orcamento)
         self.submenu_orcamento.add_command(label="Buscar Orçamento")
         self.submenu_orcamento.add_command(label="Sair", command=sys.exit)
+
+        """
+            TODO Vincular a tela de busca de orçamento com a tela principal. Ao clicar no menu chamar a tela de busca
+        """
         
         # Cria submenus em Cadastro
         self.submenu_cadastro = Menu(self.menu_principal, tearoff=0)

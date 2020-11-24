@@ -12,7 +12,7 @@ class ConexaoUsuario:
             password="root",
             host="localhost",
             port="5432",
-            database="teste"
+            database="esquadriaDB"
         )
 
         """Instancia um objeto cursor"""

@@ -201,7 +201,7 @@ class Orcamento:
         messagebox.showinfo("salvou","salvou")
 
 
-chama = Orcamento().chama_tela_novo_orcamento()
+#chama = Orcamento().chama_tela_novo_orcamento()
 
 
 """

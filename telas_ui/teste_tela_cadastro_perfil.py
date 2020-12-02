@@ -1,22 +1,28 @@
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
+from PyQt5 import QtCore, QtGui, QtWidgets, uic
 
-from ui_tela_cadastro_perfil import Ui_tela_cadastro_perfil
 
-class TestePerfil(QtWidgets.QMainWindow, Ui_tela_cadastro_perfil):
-
+class TestePerfil(QtWidgets.QMainWindow):
     def __init__(self):
-        super(TestePerfil, self).__init__()
-        self.setupUi(self)
-        self.app = None
-        self.tela_cadastro_perfil = None
+        self.app = QtWidgets.QApplication([])
+        self.form = uic.loadUi('telas_ui\\tela_cadastro_perfil.ui')
 
-    
+
     def chama_tela_teste_perfil(self):
-        self.app = QtWidgets.QApplication(sys.argv)
-        self.tela_cadastro_perfil = TestePerfil()
-        tela_cadastro_perfil.show()
-        sys.exit(app.exec_())
-    
-chama = TestePerfil().chama_tela_teste_perfil()
+        self.form.show()
+
+        def botao_salvar():
+            self.form.lineEdit_descricao.setText('Preenche')
+
+        def botao_limpar():
+        	self.form.lineEdit_descricao.setText('')
+	    	
+        
+        self.form.pushButton_salvar.clicked.connect(botao_salvar)
+        self.form.pushButton_editar.clicked.connect(botao_limpar)
+        self.app.exec_()
+
+
+
+#chama = TestePerfil().chama_tela_teste_perfil()
+

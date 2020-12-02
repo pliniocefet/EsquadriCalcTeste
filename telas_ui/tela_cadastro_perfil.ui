@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>tela_cadastro_perfil</class>
  <widget class="QMainWindow" name="tela_cadastro_perfil">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -210,7 +213,7 @@
      <string>Novo</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_salvar_2">
+   <widget class="QPushButton" name="pushButton_localizar">
     <property name="geometry">
      <rect>
       <x>310</x>

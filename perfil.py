@@ -111,4 +111,4 @@ class Perfil:
         
         self.conexao.insert_perfil()
 
-chama = Perfil().chama_tela_cadastro_perfil()
+#chama = Perfil().chama_tela_cadastro_perfil()

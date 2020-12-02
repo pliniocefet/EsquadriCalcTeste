@@ -7,7 +7,7 @@ from perfil import Perfil
 from acessorio import Acessorio
 from vidro import Vidro
 from produto import Produto
-from telas_ui.teste_tela_cadastro_perfil import TestePerfil
+from telas_ui.tela_cadastro_perfil import Perfil
 
 
 class TelaPrincipal:
@@ -25,7 +25,6 @@ class TelaPrincipal:
         self.orcamento = Orcamento()
         self.configurar_vidro = ConfiguraVidro()
         self.tela_ajuda = Ajuda()
-        self.testePerfil = TestePerfil()
 
         self.usuario_logado = None
 
@@ -70,7 +69,7 @@ class TelaPrincipal:
         
         # Cria submenus em Cadastro
         self.submenu_cadastro = Menu(self.menu_principal, tearoff=0)
-        self.submenu_cadastro.add_command(label="Cadastrar perfil", command=self.testePerfil.chama_tela_teste_perfil)
+        self.submenu_cadastro.add_command(label="Cadastrar perfil", command=self.perfil.chama_tela_cadastro_perfil)
         self.submenu_cadastro.add_command(label="Cadastrar acessorio", command=self.acessorio.chama_tela_cadastro_acessorio)
         self.submenu_cadastro.add_command(label="Cadastrar vidro", command=self.vidro.chama_tela_cadastro_vidro)
         self.submenu_cadastro.add_command(label="Cadastrar Produto", command=self.produto.chama_tela_cadastro_produto)

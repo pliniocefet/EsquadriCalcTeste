@@ -2,13 +2,13 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 
 
-class TestePerfil(QtWidgets.QMainWindow):
+class Perfil(QtWidgets.QMainWindow):
     def __init__(self):
         self.app = QtWidgets.QApplication([])
         self.form = uic.loadUi('telas_ui\\tela_cadastro_perfil.ui')
 
 
-    def chama_tela_teste_perfil(self):
+    def chama_tela_cadastro_perfil(self):
         self.form.show()
 
         def botao_salvar():
@@ -24,5 +24,5 @@ class TestePerfil(QtWidgets.QMainWindow):
 
 
 
-#chama = TestePerfil().chama_tela_teste_perfil()
+#chama = Perfil().chama_tela_cadastro_perfil()
 

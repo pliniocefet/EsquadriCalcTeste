@@ -15,12 +15,15 @@ class Login(QMainWindow):
 		self.model_login = ModelLogin()
 		self.tela_principal = TelaPrincipal()
 
+		### AÇÃO DO BOTÃO LOGIN ###
 		self.ui.pushButton_login.clicked.connect(self.verifica_usuario)
 
 	
 	def verifica_usuario(self):
 		if self.model_login.event_bt_login(self.ui.lineEdit_user.text(), self.ui.lineEdit_password.text()):
+			self.hide()
 			self.tela_principal.chama_tela_principal()
+			
 		
 if __name__ == "__main__":
 	app = QApplication(sys.argv)

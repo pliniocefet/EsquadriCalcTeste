@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from telas_ui.tela_login import Ui_MainWindow
+from controle.controle_login import ControleLogin
 import sys
 
 

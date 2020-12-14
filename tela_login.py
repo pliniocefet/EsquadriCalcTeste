@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 from novo_usuario import NovoUsuario
 import sys
-from conexao_usuario import ConexaoUsuario
+from model.conexao_usuario import ConexaoUsuario
 from tela_principal import TelaPrincipal
 
 

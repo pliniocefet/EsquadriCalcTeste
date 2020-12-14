@@ -1,36 +1,32 @@
-
+from model.conexao_usuario import ConexaoUsuario
 
 class ModelLogin():
 
 	def __init__(self):
-		self.usuario = ''
-		self.senha = ''
+		self.usuario = None
+		self.senha = None
+
+		self.conexao = ConexaoUsuario()
 
 
-	def showMessage(self, message, frame_error, label_error):
-		frame_error.show()
-		label_error.setText(message)
+	def event_bt_login(self, usuario_logado, senha_logado):
 
+		self.usuario = self.conexao.buscar_user(usuario_logado)
+		user = None
+		senha = None
 
-	def check_login(self, campo_usuario, campo_senha, save_user):
-		self.usuario = ''
-		self.senha = ''
-
-		if not campo_usuario:
-			self.usuario = ' User Empty '
+		# Se a lista de usuarios for diferente de vazia preenche os campos user e senha com os dados
+		if self.usuario != []:
+			user = self.usuario[0][0]
+			senha = self.usuario[0][1]
 		else:
-			self.usuario = ''
+			print("Usuario ou senha invalida!! ")
 
-		if not campo_senha:
-			self.senha = ' Password Empty '
+		if user == usuario_logado:
+			if senha == senha_logado:
+				print("Bem vindo", "Seja Bem vindo " + self.usuario[0][0].title())
+				return True
+			else:
+				print("Atenção!", "Senha inválida! ")
 		else:
-			self.senha = ''
-
-		if self.usuario + self.senha != '':
-			text = self.usuario + self.senha
-			self.showMessage(text)
-		else:
-			text = ' Login Ok '
-			if save_user:
-				text = text + ' | Save user: Ok '
-			self.showMessage(text)
+			print("Atenção!", "Usuario não cadastrado!! ")

@@ -109,4 +109,4 @@ class TelaPrincipal:
 
         return self.tela_principal.mainloop()
     
-chama = TelaPrincipal().chama_tela_principal()
+#chama = TelaPrincipal().chama_tela_principal()

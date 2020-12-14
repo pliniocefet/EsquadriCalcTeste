@@ -167,4 +167,4 @@ class ConfiguraVidro:
 
         self.tela_config_vidro.mainloop()
 
-# chama = ConfiguraVidro().chama_tela_config_vidro()
+#chama = ConfiguraVidro().chama_tela_config_vidro()

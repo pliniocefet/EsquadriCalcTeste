@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow_principal</class>
+ <widget class="QMainWindow" name="MainWindow_principal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>*** EsquadriCalc - Software para Cálculos de Esquadrias de Alumínio ***</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOrcamentos">
+    <property name="title">
+     <string>Orçamentos</string>
+    </property>
+    <addaction name="actionNovo_Orcamento"/>
+    <addaction name="actionPesquisar_Orcamento"/>
+    <addaction name="separator"/>
+    <addaction name="actionSair"/>
+   </widget>
+   <widget class="QMenu" name="menuCadastro">
+    <property name="title">
+     <string>Cadastro</string>
+    </property>
+    <addaction name="actionCadastro_de_Aluminios"/>
+    <addaction name="actionCadastro_de_Acessorios"/>
+    <addaction name="actionCadastro_de_Vidros"/>
+    <addaction name="actionCadastro_de_Produtos"/>
+    <addaction name="actionCadastro_de_Clientes"/>
+   </widget>
+   <widget class="QMenu" name="menuConfiguracoes">
+    <property name="title">
+     <string>Configurações</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuRelatorios">
+    <property name="title">
+     <string>Relatórios</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuAjuda">
+    <property name="title">
+     <string>Ajuda</string>
+    </property>
+    <addaction name="actionSobre"/>
+   </widget>
+   <addaction name="menuOrcamentos"/>
+   <addaction name="menuCadastro"/>
+   <addaction name="menuConfiguracoes"/>
+   <addaction name="menuRelatorios"/>
+   <addaction name="menuAjuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNovo_Orcamento">
+   <property name="text">
+    <string>Novo Orçamento...</string>
+   </property>
+  </action>
+  <action name="actionPesquisar_Orcamento">
+   <property name="text">
+    <string>Pesquisar Orçamento</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+  <action name="actionCadastro_de_Aluminios">
+   <property name="text">
+    <string>Cadastro de Clientes</string>
+   </property>
+  </action>
+  <action name="actionCadastro_de_Acessorios">
+   <property name="text">
+    <string>Cadastro de Alumínios</string>
+   </property>
+  </action>
+  <action name="actionCadastro_de_Vidros">
+   <property name="text">
+    <string>Cadastro de Acessórios</string>
+   </property>
+  </action>
+  <action name="actionCadastro_de_Produtos">
+   <property name="text">
+    <string>Cadastro de Vidros</string>
+   </property>
+  </action>
+  <action name="actionCadastro_de_Clientes">
+   <property name="text">
+    <string>Criar Produtos</string>
+   </property>
+  </action>
+  <action name="actionSobre">
+   <property name="text">
+    <string>Sobre...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

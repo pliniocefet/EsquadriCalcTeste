@@ -7,7 +7,7 @@ from perfil import Perfil
 from acessorio import Acessorio
 from vidro import Vidro
 from produto import Produto
-from telas_ui.tela_cadastro_perfil import Perfil
+#from telas_ui.tela_cadastro_perfil import Perfil
 
 
 class TelaPrincipal:
@@ -109,4 +109,4 @@ class TelaPrincipal:
 
         return self.tela_principal.mainloop()
     
-#chama = TelaPrincipal().chama_tela_principal()
+chama = TelaPrincipal().chama_tela_principal()

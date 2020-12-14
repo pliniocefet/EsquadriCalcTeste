@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="Close_image">
+    <file>cil-x.png</file>
+  </qresource>
+  <qresource prefix="Avatar">
+    <file>avatar_login.png</file>
+  </qresource>
+  <qresource prefix="logon">
+    <file>Esquadricalc-230x80.png</file>
+  </qresource>
+</RCC>

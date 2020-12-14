@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="356fa59f-20b5-4910-9e31-0585ced26d34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EsquadriCalcTeste.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EsquadriCalcTeste.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexao_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/conexao_usuario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/novo_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/novo_usuario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tela_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tela_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tela_config_vidro.py" beforeDir="false" afterPath="$PROJECT_DIR$/tela_config_vidro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telas_ui/tela_cadastro_perfil.py" beforeDir="false" afterPath="$PROJECT_DIR$/telas_ui/tela_cadastro_perfil.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +50,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EsquadriCalcV3" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -174,11 +169,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.tela_principal" />
-      <item itemvalue="Python.tela_config_vidro" />
       <item itemvalue="Python.getTextCombobox" />
-      <item itemvalue="Python.tela_config_vidro_teste" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.tela_config_vidro" />
+      <item itemvalue="Python.tela_config_vidro_teste" />
+      <item itemvalue="Python.tela_principal" />
     </list>
     <recent_temporary>
       <list>
@@ -214,11 +209,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1607265310990">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607265310990" />
     <state width="1345" height="144" key="GridCell.Tab.0.bottom" timestamp="1605668359444">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

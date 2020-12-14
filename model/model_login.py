@@ -2,30 +2,35 @@
 
 class ModelLogin():
 
-	def showMessage(message):
-			self.frame_error.show()
-			self.label_error.setText(message)
+	def __init__(self):
+		self.usuario = ''
+		self.senha = ''
 
 
-	def check_login(self):
-		usuario = ''
-		senha = ''
+	def showMessage(self, message, frame_error, label_error):
+		frame_error.show()
+		label_error.setText(message)
 
-		if not self.lineEdit_user.text():
-			usuario = ' User Empty '
+
+	def check_login(self, campo_usuario, campo_senha, save_user):
+		self.usuario = ''
+		self.senha = ''
+
+		if not campo_usuario:
+			self.usuario = ' User Empty '
 		else:
-			usuario = ''
+			self.usuario = ''
 
-		if not self.lineEdit_password.text():
-			senha = ' Password Empty '
+		if not campo_senha:
+			self.senha = ' Password Empty '
 		else:
-			senha = ''
+			self.senha = ''
 
-		if usuario + senha != '':
-			text = usuario + senha
-			showMessage(text)
+		if self.usuario + self.senha != '':
+			text = self.usuario + self.senha
+			self.showMessage(text)
 		else:
 			text = ' Login Ok '
-			if self.checkBox_save_user.isChecked():
+			if save_user:
 				text = text + ' | Save user: Ok '
-			showMessage(text)
+			self.showMessage(text)

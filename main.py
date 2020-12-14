@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from telas_ui.tela_login import Ui_MainWindow
-from controle.controle_login import ControleLogin
+from model.model_login import ModelLogin
 import sys
 
 
@@ -11,7 +11,7 @@ class Login(QMainWindow):
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
 
-
+		
 if __name__ == "__main__":
 	app = QApplication(sys.argv)
 	login = Login()

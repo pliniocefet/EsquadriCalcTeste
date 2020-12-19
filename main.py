@@ -1,34 +1,40 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-from telas_ui.tela_login import Ui_MainWindow
-from model.model_login import ModelLogin
-from controle.controle_tela_principal import TelaPrincipal
+from controle.controle_principal import ControlePrincipal
+from view.tela_login import Ui_MainWindow
 import sys
 
 
-class Login(QMainWindow):
+class Main(QMainWindow):
+	"""
+		Classe que controla o Login do Software
+		Classe com o main - primeiro a ser executado
+	"""
 	def __init__(self):
 		super().__init__()
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
 
-		self.model_login = ModelLogin()
-		self.tela_principal = TelaPrincipal()
+		# CONFIGURAÇÕES INICIAIS
+		self.ui.pushButton_error.setText('')
 
-		### AÇÃO DO BOTÃO LOGIN ###
-		self.ui.pushButton_login.clicked.connect(self.verifica_usuario)
+		# TELA PRINCIPAL
+		self.tela_principal = ControlePrincipal()
 
+		# AÇÃO DO BOTÃO lOGIN
+		# Chama o metodo que exibe a tela principal
+		self.ui.pushButton_login.clicked.connect(self.chama_tela_principal)
 
-	def verifica_usuario(self):
-		if self.model_login.event_bt_login(self.ui.lineEdit_user.text(), self.ui.lineEdit_password.text()):
-			self.hide()
-			self.tela_principal.show()
+	def validar_usuario(self):
+		pass
 
+	def chama_tela_principal(self):
+		self.hide()
+		self.tela_principal.show()
 
+		
 if __name__ == "__main__":
 	app = QApplication(sys.argv)
-	login = Login()
-	login.show()
+	main = Main()
+	main.show()
 	sys.exit(app.exec_())
-
-

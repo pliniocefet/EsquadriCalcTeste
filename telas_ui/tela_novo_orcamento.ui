@@ -42,9 +42,6 @@
        <bool>false</bool>
       </property>
       <widget class="QWidget" name="tab_dados_cliente">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(240, 240, 240);</string>
-       </property>
        <attribute name="title">
         <string>Dados do Cliente</string>
        </attribute>
@@ -98,7 +95,7 @@
          <string>Data</string>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>21/05/2020</string>
@@ -144,9 +141,6 @@
         <property name="toolTip">
          <string>Endereço da Obra ou do Cliente</string>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
         <property name="text">
          <string/>
         </property>
@@ -162,9 +156,6 @@
         </property>
         <property name="toolTip">
          <string>Telefone para contato</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string/>
@@ -225,7 +216,7 @@
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>00000000</string>
@@ -267,9 +258,6 @@
         </property>
         <property name="toolTip">
          <string>Cidade da Obra</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string/>
@@ -342,9 +330,6 @@
         <property name="toolTip">
          <string>Bairro da Obra</string>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
         <property name="text">
          <string/>
         </property>
@@ -360,9 +345,6 @@
         </property>
         <property name="toolTip">
          <string>Vendedor Responsável</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="placeholderText">
          <string>Selecione o vendedor</string>
@@ -425,9 +407,6 @@
         <property name="toolTip">
          <string>Numero da Obra</string>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
         <property name="text">
          <string/>
         </property>
@@ -443,9 +422,6 @@
         </property>
         <property name="toolTip">
          <string>Nome do Cliente</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string/>
@@ -521,9 +497,6 @@
         <property name="toolTip">
          <string>Observações sobre o Orçamento</string>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
        </widget>
        <widget class="QLabel" name="label_observacoes">
         <property name="geometry">
@@ -540,9 +513,6 @@
        </widget>
       </widget>
       <widget class="QWidget" name="tab_itens_orcamento">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(240, 240, 240);</string>
-       </property>
        <attribute name="title">
         <string>Itens do Orçamento</string>
        </attribute>
@@ -581,9 +551,6 @@
           <height>20</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
         <property name="text">
          <string/>
         </property>
@@ -597,9 +564,6 @@
           <height>20</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
         <property name="text">
          <string/>
         </property>
@@ -612,9 +576,6 @@
           <width>130</width>
           <height>22</height>
          </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="maxCount">
          <number>2147483647</number>
@@ -656,9 +617,6 @@
           <width>100</width>
           <height>20</height>
          </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string/>
@@ -764,9 +722,6 @@
           <height>20</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
         <property name="text">
          <string/>
         </property>
@@ -792,9 +747,6 @@
           <width>130</width>
           <height>22</height>
          </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="placeholderText">
          <string>Selecione a Linha</string>
@@ -834,9 +786,6 @@
           <height>20</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
         <property name="text">
          <string/>
         </property>
@@ -849,9 +798,6 @@
           <width>50</width>
           <height>20</height>
          </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string/>
@@ -892,18 +838,12 @@
           <height>20</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
         <property name="text">
          <string/>
         </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_relatorio">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(240, 240, 240);</string>
-       </property>
        <attribute name="title">
         <string>Relatório</string>
        </attribute>

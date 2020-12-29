@@ -1,37 +1,36 @@
-
+from model.conexao_usuario import ConexaoUsuario
 
 class ModelLogin():
 	"""
 		Classe responsável por validar o usuario e informar ao controle
 	"""
 
-	def __init__(self):
-		self.usuario = ''
-		self.senha = ''
+	def event_bt_login(self,login,senha):
+		"""
+			METODO QUE VERIFICA NO BANCO DE DADOS O NOME DO USUARIO E A SENHA
+			BOTÃO LOGIN
+		"""
+		# Conexão com banco de dados
+		self.conexao = ConexaoUsuario()
 
-	def showMessage(self, message, frame_error, label_error):
-		frame_error.show()
-		label_error.setText(message)
+		usuario = self.conexao.buscar_user(login)
+		user = None
+		password = None
 
-	def check_login(self, campo_usuario, campo_senha, save_user):
-		self.usuario = ''
-		self.senha = ''
-
-		if not campo_usuario:
-			self.usuario = ' User Empty '
+		if usuario != []:
+			user = usuario[0][0]
+			password = usuario[0][1]
 		else:
-			self.usuario = ''
+			print("Atenção!", "Usuario ou senha invalida!! ")
 
-		if not campo_senha:
-			self.senha = ' Password Empty '
-		else:
-			self.senha = ''
+		if user == login:
+			if password == senha:
+				print("Bem vindo", "Seja Bem vindo " + usuario[0][0].title())
+				return True
 
-		if self.usuario + self.senha != '':
-			text = self.usuario + self.senha
-			self.showMessage(text)
+			else:
+				print("Atenção!", "Senha inválida! ")
+				return False
 		else:
-			text = ' Login Ok '
-			if save_user:
-				text = text + ' | Save user: Ok '
-			self.showMessage(text)
+			print("Atenção!", "Usuario não cadastrado!! ")
+			return False

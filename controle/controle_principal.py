@@ -18,8 +18,15 @@ class ControlePrincipal(QMainWindow):
         # INSTACIA DO MENU NOVO ORÇAMENTO
         self.novo_orcamento = ControleNovoOrcamento()
 
+        # CHAMA O METODO PARA FECHAR O SISTEMA
+        self.tela_principal.actionSair.triggered.connect(self.menu_sair)
+
+        # CHAMA A TELA DE NOVO ORÇAMENTO
         self.tela_principal.actionNovo_Orcamento.triggered.connect(self.menu_novo_orcamento)
 
     def menu_novo_orcamento(self):
         self.novo_orcamento.show()
+
+    def menu_sair(self):
+        self.close()
 

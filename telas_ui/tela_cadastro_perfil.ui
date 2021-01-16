@@ -50,6 +50,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_codigo">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -60,6 +63,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_descricao">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -70,6 +76,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_peso">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -93,6 +102,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_comprimento">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -129,6 +141,9 @@
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox_linha">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -162,6 +177,9 @@
     </item>
    </widget>
    <widget class="QPushButton" name="pushButton_editar">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -175,6 +193,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_salvar">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>

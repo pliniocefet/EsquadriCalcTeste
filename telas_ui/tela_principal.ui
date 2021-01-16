@@ -42,11 +42,11 @@
     <property name="title">
      <string>Cadastro</string>
     </property>
+    <addaction name="actionCadastro_de_Clientes"/>
     <addaction name="actionCadastro_de_Aluminios"/>
     <addaction name="actionCadastro_de_Acessorios"/>
     <addaction name="actionCadastro_de_Vidros"/>
     <addaction name="actionCadastro_de_Produtos"/>
-    <addaction name="actionCadastro_de_Clientes"/>
    </widget>
    <widget class="QMenu" name="menuConfiguracoes">
     <property name="title">
@@ -86,27 +86,27 @@
     <string>Sair</string>
    </property>
   </action>
-  <action name="actionCadastro_de_Aluminios">
+  <action name="actionCadastro_de_Clientes">
    <property name="text">
     <string>Cadastro de Clientes</string>
    </property>
   </action>
-  <action name="actionCadastro_de_Acessorios">
+  <action name="actionCadastro_de_Aluminios">
    <property name="text">
     <string>Cadastro de Alumínios</string>
    </property>
   </action>
-  <action name="actionCadastro_de_Vidros">
+  <action name="actionCadastro_de_Acessorios">
    <property name="text">
     <string>Cadastro de Acessórios</string>
    </property>
   </action>
-  <action name="actionCadastro_de_Produtos">
+  <action name="actionCadastro_de_Vidros">
    <property name="text">
     <string>Cadastro de Vidros</string>
    </property>
   </action>
-  <action name="actionCadastro_de_Clientes">
+  <action name="actionCadastro_de_Produtos">
    <property name="text">
     <string>Criar Produtos</string>
    </property>

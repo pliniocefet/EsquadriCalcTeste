@@ -1,8 +1,8 @@
 import psycopg2
-from tkinter import messagebox
 
 
-class ConexaoPerfil:
+
+class ModelPerfil:
 
     """Metodo Construtor"""
     def __init__(self):
@@ -37,28 +37,25 @@ class ConexaoPerfil:
         # self.autocommit = extensions.ISOLATION_LEVEL_AUTOCOMMIT
         # self.connection.set_isolation_level(self.autocommit)
                 
-    def insert_perfil(self):
+    def insert_perfil(self, insert):
         try:
             """Instancia um objeto cursor"""
             self.cursor = self.connection.cursor()
             self.table_name = "perfis"
             self.sql_insert = "INSERT INTO " + self.table_name + "(codigo, descricao, kgmetro, linha, comprimento) VALUES(%s,%s,%s,%s,%s)"
-            self.cursor.execute(self.sql_insert, self.inserted_values)
+            self.cursor.execute(self.sql_insert, insert)
             
             """Realiza o commit na conexao(insere os dados no banco)"""
             self.connection.commit()
-            messagebox.showinfo("Concluido", "Cadastro realizado com Sucesso!")
+            print("Concluido", "Cadastro realizado com Sucesso!")
 
         except:
             print("Erro")
             self.connection = None
 
         finally:
-            # print("Registro inserido com sucesso!")
-
             self.cursor.close()
             self.connection.close()
-            # print("Conexão com banco encerrada")
 
     def delete_perfil(self, delete_value):
 

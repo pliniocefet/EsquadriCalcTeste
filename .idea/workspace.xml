@@ -20,8 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="356fa59f-20b5-4910-9e31-0585ced26d34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tela_config_vidro.py" beforeDir="false" afterPath="$PROJECT_DIR$/tela_config_vidro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telas_ui/tela_cadastro_perfil.py" beforeDir="false" afterPath="$PROJECT_DIR$/telas_ui/tela_cadastro_perfil.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controle/controle_cadastro_cliente.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controle/controle_pesquisar_orcamento.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/model_cliente.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telas_ui/tela_pesquisar_orcamento.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/tela_pesquisar_orcamento.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/EsquadriCalcTeste.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EsquadriCalcTeste.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controle/controle_cadastro_perfil.py" beforeDir="false" afterPath="$PROJECT_DIR$/controle/controle_cadastro_perfil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controle/controle_principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/controle/controle_principal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_perfil.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_perfil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telas_ui/tela_principal.ui" beforeDir="false" afterPath="$PROJECT_DIR$/telas_ui/tela_principal.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/tela_principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/tela_principal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,22 +56,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kRd4yBZRxTCJeyTQOCh9qlUxKo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../EsquadriCalcV3" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\EsquadriCalcTeste\view" />
+      <recent name="C:\Users\Alumitam\PycharmProjects\EsquadriCalcTeste\referencias" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Alumitam\PycharmProjects" />
       <recent name="C:\Users\Alumitam\PycharmProjects\EsquadriCalcTeste" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Alumitam\PycharmProjects\EsquadriCalcTeste\referencias" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -214,43 +231,26 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1607265310990">
+    <state width="1345" height="144" key="GridCell.Tab.0.bottom" timestamp="1620659457988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607265310990" />
-    <state width="1345" height="144" key="GridCell.Tab.0.bottom" timestamp="1605668359444">
+    <state width="1345" height="144" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620659457988" />
+    <state width="1345" height="144" key="GridCell.Tab.0.center" timestamp="1620659457988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="144" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605668359444" />
-    <state width="1345" height="144" key="GridCell.Tab.0.center" timestamp="1605668359444">
+    <state width="1345" height="144" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620659457988" />
+    <state width="1345" height="144" key="GridCell.Tab.0.left" timestamp="1620659457988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="144" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605668359444" />
-    <state width="1345" height="144" key="GridCell.Tab.0.left" timestamp="1605668359444">
+    <state width="1345" height="144" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620659457988" />
+    <state width="1345" height="144" key="GridCell.Tab.0.right" timestamp="1620659457988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="144" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605668359444" />
-    <state width="1345" height="144" key="GridCell.Tab.0.right" timestamp="1605668359444">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="144" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605668359444" />
-    <state width="1345" height="210" key="GridCell.Tab.1.bottom" timestamp="1605668359436">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="210" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605668359436" />
-    <state width="1345" height="210" key="GridCell.Tab.1.center" timestamp="1605668359436">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="210" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605668359436" />
-    <state width="1345" height="210" key="GridCell.Tab.1.left" timestamp="1605668359436">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="210" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605668359436" />
-    <state width="1345" height="210" key="GridCell.Tab.1.right" timestamp="1605668359436">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="210" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605668359436" />
+    <state width="1345" height="144" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620659457988" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

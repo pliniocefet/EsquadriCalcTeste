@@ -6,7 +6,7 @@ class ModelPerfil:
 
     """Metodo Construtor"""
     def __init__(self):
-        """connetion recebe informaes para conexao com postgre"""
+        """connetion recebe informações para conexao com postgre"""
         self.connection = psycopg2.connect(
             user="postgres",
             password="root",

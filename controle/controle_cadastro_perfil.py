@@ -6,6 +6,7 @@ class ControleCadastroPerfil(QMainWindow):
 	
 	def __init__(self):
 		super().__init__()
+		# CHAMA A TELA DE CADASTRO DE PERFIS
 		self.tela_cadastro_perfil = Ui_tela_cadastro_perfil()
 		self.tela_cadastro_perfil.setupUi(self)
 

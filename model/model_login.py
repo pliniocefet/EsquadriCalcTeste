@@ -25,7 +25,7 @@ class ModelLogin():
 
 		if user == login:
 			if password == senha:
-				print("Bem vindo", "Seja Bem vindo " + usuario[0][0].title())
+				print("Seja Bem vindo " + usuario[0][0].title())
 				return True
 
 			else:
